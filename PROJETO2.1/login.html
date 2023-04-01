@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/estiloLogin.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./imagens/senac-logo.png" type="image/png" />
+    <title>Senac Parking</title>
+  </head>
+  <body
+    style="
+      background-color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+      font-size: 20px;
+      color: white;
+    "
+  >
+    <nav class="navbar navbar-expand-lg mb-3" style="background-color: #14213d">
+      <span class="navbar-brand h1"
+        ><img
+          src="./imagens/senac-logo.png"
+          width="30"
+          height="30"
+          class="d-inline-block"
+          alt=""
+        />
+        Senac Parking</span
+      >
+    </nav>
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 75vh"
+    >
+      <div class="card">
+        <div
+          class="card text-white p-5"
+          style="max-width: 50rem; background-color: #fca311"
+        >
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Usuário</label>
+              <input
+                type="user"
+                class="form-control"
+                id="login"
+                aria-describedby="userHelp"
+                placeholder="Insira o usuário"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senha"
+                placeholder="Senha"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn mt-5 text-light font-weight-bold"
+              style="background-color: #2b5690"
+              onclick="validade()"
+            >
+              Entrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="jsLogin.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

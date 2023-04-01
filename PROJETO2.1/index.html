@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./imagens/senac-logo.png" type="image/png" />
+    <title>Senac Parking</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class=""
+    style="
+      overflow-x: hidden;
+      overflow-y: hidden;
+      background-color: #e5e5e5;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+      font-size: 21px;
+      color: white;
+      overflow-y: scroll;
+      ">
+    <nav class="navbar navbar-expand-lg mb-3" style="background-color: #14213d">
+      <span class="navbar-brand h1"
+        ><img
+          src="./imagens/senac-logo.png"
+          width="30"
+          height="30"
+          class="d-inline-block"
+          alt=""
+        />
+        Senac Parking</span
+      >
+    </nav>
+    <div class="row container-fluid">
+      <div class="col-3 rounded">
+        <div
+          class="nav flex-column nav-pills ml-5 rounded"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+          style="height: 90vh; background-color: #14213d"
+        >
+          <a
+            class="nav-link text-light active"
+            id="v-pills-vagas-tab"
+            data-toggle="pill"
+            href="#v-pills-vagas"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+            >Estacionamento</a
+          >
+          <!-- <a
+            class="nav-link text-light"
+            id="v-pills-cadastroUsuario-tab"
+            data-toggle="pill"
+            href="#v-pills-cadastroUsuario"
+            role="tab"
+            aria-controls="v-pills-cadastroUsuario"
+            aria-selected="false"
+            >Cadastro de Usuário</a
+          > -->
+
+          <a
+            class="nav-link text-light"
+            id="v-pills-usuarios-tab"
+            data-toggle="pill"
+            href="#v-pills-lista"
+            role="tab"
+            aria-controls="v-pills-settings"
+            aria-selected="false"
+            >Lista</a
+          >
+            <a
+            class="nav-link text-light"
+            id="v-pills-cadastroCarro-tab"
+            data-toggle="pill"
+            href="#v-pills-cadastroCarro"
+            role="tab"
+            aria-controls="v-pills-cadastroCarro"
+            aria-selected="false"
+            >Relatório</a
+          >
+          <!-- <a
+            class="nav-link text-light"
+            id="v-pills-veiculos-tab"
+            data-toggle="pill"
+            href="#v-pills-veiculos"
+            role="tab"
+            aria-controls="v-pills-veiculos"
+            aria-selected="false"
+            >Veículos</a
+          >
+          <a
+            class="nav-link text-light"
+            id="v-pills-relatorio-tab"
+            data-toggle="pill"
+            href="#v-pills-relatorio"
+            role="tab"
+            aria-controls="v-pills-relatorio"
+            aria-selected="false"
+            >Relatório</a
+          > -->
+          <a
+            class="nav-link text-light"
+            id="v-pills-suporte-tab"
+            role="tab"
+            aria-selected="false" href="./login.html"
+            style="text-align: center;background-color: black;">Sair</a
+          >
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div
+            class="tab-pane fade show active mr-5"
+            id="v-pills-vagas"
+            role="tabpanel"
+            aria-labelledby="v-pills-vagas-tab"
+          >
+            <div class="d-flex" style="gap: 15px">
+              <div
+                class="card d-flex text-white mb-3 w-25"
+                style="
+                  max-width: auto;
+                  background-color: #14213d;
+                  height: 480px;
+                "
+              >
+                <div class="card-body text-center">
+                  <h5 class="card-title">IDOSO</h5>
+                  <p class="card-text">
+                    <button type="button" id="botao1" class="btn btn-success btn-lg mt-2 mb-2">IDO1</button>
+                    
+                    <button type="button" id="botao2" class="btn btn-success btn-lg mt-2 mb-2">ID02</button>
+                    
+                    <!-- <button type="button" id="botao3" class="btn btn-success">IDO3</button>
+                    
+                    <button type="button" id="botao4" class="btn btn-success">IDO4</button>
+                    
+                    <button type="button" id="botao5" class="btn btn-success">IDO5</button>
+                    
+                    <button type="button" id="botao6" class="btn btn-success">IDO6</button> -->
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card text-white mb-3 w-75"
+                style="
+                  max-width: auto;
+                  background-color: #14213d;
+                  height: 480px;
+                "
+              >
+                <div class="card-body text-center">
+                  <h5 class="card-title text-center">FUNCIONÁRIOS</h5>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG1</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG2</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG3</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG4</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG5</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG6</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG7</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG8</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG9</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG10</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG11</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG12</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG13</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG14</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG15</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG16</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG17</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG18</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG19</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG20</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG21</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG22</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG23</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG24</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG25</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">VG26</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex" style="gap: 15px">
+              <div
+                class="card text-white mb-3 w-25"
+                style="
+                  max-width: auto;
+                  background-color: #14213d;
+                  height: 375px;
+                "
+              >
+                <div class="card-body text-center">
+                  <h5 class="card-title">MOTOS</h5>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">MT1</button>
+                    
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">MT2</button>
+                    
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">MT3</button>
+                    
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">MT4</button>
+                    
+                    <!-- <button type="button" class="btn btn-success mt-2 mb-2">MT5</button> -->
+                    
+                    <!-- <button type="button" class="btn btn-success mt-2 mb-2">MT6</button> -->
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card text-white mb-3 w-25"
+                style="
+                  max-width: auto;
+                  background-color: #14213d;
+                  height: 375px;
+                "
+              >
+                <div class="card-body text-center">
+                  <h5 class="card-title">DEFICIENTES</h5>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">DEF1</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">DEF2</button>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card text-white mb-3 w-50"
+                style="
+                  max-width: auto;
+                  background-color: #14213d;
+                  height: 375px;
+                "
+              >
+                <div class="card-body text-center">
+                  <h5 class="card-title">CARROS OFICIAIS</h5>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI1</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI2</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI3</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI4</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI5</button>
+                    <button type="button" class="btn btn-success btn-lg mt-2 mb-2">OFI6</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-cadastroUsuario"
+            role="tabpanel"
+            aria-labelledby="v-pills-cadastroUsuario-tab"
+          >
+            <div
+              class="card text-white mb-3"
+              style="max-width: auto; background-color: #14213d"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Cadastrar Usuário</h5>
+                <p class="card-text"></p>
+                <form>
+                  <div class="form-group">
+                    <label for="inputName4">Nome Completo</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Nome"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputNumber4">CPF</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputNumber4"
+                      placeholder="CPF do usuário"
+                    />
+                  </div>
+                  <div class="form-group w-25">
+                    <label for="inputAddress">Data Nascimento</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="inputAddress"
+                      placeholder="Data de nascimento"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-cadastroCarro"
+            role="tabpanel"
+            aria-labelledby="v-pills-cadastroCarro-tab"
+          >
+            <div
+              class="card text-white mb-3"
+              style="max-width: auto; background-color: #14213d"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Relátório</h5>
+                <p class="card-text"></p>
+                <form>
+                  <div class="form-group">
+                    <label for="inputName4">Período mais utilizado</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Manhã" readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputCar4">Acidentes</label>
+                    <input
+                      type="car"
+                      class="form-control"
+                      id="inputCar4"
+                      placeholder="3" readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Novos Veículos Cadastrados</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress"
+                      placeholder="7"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Vagas Inativas</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress"
+                      placeholder="0" readonly
+                    />
+                    <a href="#" class="btn btn-primary btn-lg active mt-3" role="button" aria-pressed="true">Baixar PDF</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-lista"
+            role="tabpanel"
+            aria-labelledby="v-pills-lista-tab"
+          >
+            <div class="card text-white mb-3">
+              <div class="card-body rounded" style="background-color: #14213d">
+                <table class="table table-hover" style="width: 60vw">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Veículo</th>
+                      <th>Cor</th>
+                      <th>Placa</th>
+                      <th>Editar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>João da Silva</td>
+                      <td>Chevrolet Cobalt</td>
+                      <td>Prata</td>
+                      <td>QTP5F71</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Santos</td>
+                      <td>Ford Focus</td>
+                      <td>Vermelho</td>
+                      <td>JND4K28</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Carlos Oliveira</td>
+                      <td>Volkswagen Gol</td>
+                      <td>Azul</td>
+                      <td>KLJ8R14</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ana Luiza Rodrigues</td>
+                      <td>Renault Sandero</td>
+                      <td>Branco</td>
+                      <td>SHG6T52</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Lucas Silva</td>
+                      <td>Citroen C3</td>
+                      <td>Preto</td>
+                      <td>FGB9E43</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Paula Costa</td>
+                      <td>Fiat Uno</td>
+                      <td>Amarelo</td>
+                      <td>MNB2A67</td>
+                      <td>
+                        <a href="#" class="mr-3">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="#"> <i class="fa-solid fa-trash"></i> </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  
+                  <a
+                    type="button"
+                    class="btn float-right font-weight-bold mb-3"
+                    style="background-color: #fca311"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Cadastrar
+                  </a>
+
+                </table>
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div
+                      class="modal-content"
+                      style="background-color: #14213d"
+                    >
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Cadastrar
+                        </h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="inputName4">Nome Completo</label>
+                            <input
+                              type="name"
+                              class="form-control"
+                              id="inputEmail4"
+                              placeholder="Nome"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="inputCar4">Veículo</label>
+                            <input
+                              type="car"
+                              class="form-control"
+                              id="inputCar4"
+                              placeholder="Fabricante e modelo"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="inputAddress">Cor</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputAddress"
+                              placeholder="Cor do Veículo"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="inputAddress">Placa</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputAddress"
+                              placeholder="Placa do veículo"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-danger font-weight-bold"
+                          data-dismiss="modal"
+                        >
+                          Fechar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn font-weight-bold text-light"
+                          style="background-color: #fca311"
+                        >
+                          Cadastrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-veiculos"
+            role="tabpanel"
+            aria-labelledby="v-pills-veiculos-tab"
+          >
+            E...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-acidentes"
+            role="tabpanel"
+            aria-labelledby="v-pills-acidentes-tab"
+          >
+            F...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-relatorio"
+            role="tabpanel"
+            aria-labelledby="v-pills-relatorio-tab"
+          >
+            G...
+          </div>
+          <!-- <div
+            class="tab-pane fade"
+            id="v-pills-suporte"
+            role="tabpanel"
+            aria-labelledby="v-pills-suporte-tab"
+          >
+            H...
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
